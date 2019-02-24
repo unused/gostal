@@ -1,0 +1,30 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gotify</title>
+  </head>
+  <body>
+    <h1>Gotify - simple notification service</h1>
+
+    <p>Register a subscriber...</p>
+
+    <span class="js-warning"></span>
+
+    <button class="register-button">register</button>
+
+    <ul class="js-log">
+    </ul>
+
+    <script type="application/javascript">
+      const publicKey = "{{.}}";
+
+      {{template "js"}}
+
+      document.querySelector('.register-button')
+        .addEventListener("click", register);
+    </script>
+  </body>
+</html>
+{{end}}
