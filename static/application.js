@@ -107,6 +107,8 @@ function sendSubscriptionToBackEnd(subscription) {
     })
     .then(function(responseData) {
       log("Received new key: " + responseData.key);
+      log("Use " + window.location.href + "subscriptions/" + responseData.key
+        + " to send notifications");
     });
 }
 
