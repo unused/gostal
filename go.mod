@@ -1,3 +1,4 @@
+// +heroku install ./cmd/
 module github.com/unused/gostal
 
 require (
