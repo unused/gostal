@@ -1,21 +1,51 @@
-{{define "index"}}
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Gostal</title>
   </head>
   <body>
-    <h1>Gostal - simple notification service</h1>
+    <header>
+      <h1>Gostal</h1>
 
-    <p>Register a subscriber...</p>
+      <p>Trigger browser and mobile push notifications by a custom HTTPS request
+        using go microservice.</p>
+    </header>
 
-    <span class="js-warning"></span>
+    <main class="content">
+      <section>
+        <h2 class="subtitle">Client registration</h2>
+        <p>In order to receive a notification on certain device (client) - we
+          need to accept go through small simple steps.</p>
+        <button class="registration-button">Register</button>
+      </section>
 
-    <button class="register-button">register</button>
+      <section>
+        <ul class="steps">
+          <li>Request notification permission</li>
+          <li>Request push subscription</li>
+          <li>Store push subscription</li>
+          <li>Receive key <span>41e952a1-...</span></li>
+        </ul>
+      </section>
 
-    <ul class="js-log">
-    </ul>
+      <section>
+        <h2 class="subtitle">What now?</h2>
+        <p>Use the received key to trigger the notifications in registred
+          device (client).</p>
+        <textarea class="usage-example">
+          $ curl -XPOST --data "Wait, what?" https://gostal.herokuapp.com/subscriptions/91c19764-69bf-4131-92e2-aea56aea160f
+        </textarea>
+      </section>
+    </main>
+
+    <footer>Find Gostal on <a href="https://github.com/unused/gostal">GitHub</a>.</footer>
+
+    <style>
+      body { background: #10363B; margin: 0; padding: 0; }
+      h1 {  }
+      .content { background: #fff; border-radius: .3125rem; }
+    </style>
 
     <script type="application/javascript">
       const publicKey = "{{.}}";
@@ -27,4 +57,3 @@
     </script>
   </body>
 </html>
-{{end}}
