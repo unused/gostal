@@ -6,17 +6,22 @@
   </head>
   <body>
     <header>
+      <svg viewBox="0 0 107 39" xmlns="http://www.w3.org/2000/svg">
+        <path d="m1.6918 19.386c0 7.3636 4.3977 11.932 10.932 11.932 5.875 0 10.125-3.7159 10.125-9.8409v-2.9318h-9.7387v3.7045h4.8637c0 2.8977-2.3296 4.7159-5.2273 4.7159-3.6477 0-5.9659-2.7045-5.9659-7.625 0-4.7954 2.2841-7.5795 5.8182-7.5795 2.5568 0 4.3068 1.3068 5 3.4886h5.0341c-0.6364-4.6023-4.7728-7.8409-10.034-7.8409-6.1478 0-10.807 4.4318-10.807 11.977zm32.605 11.954c5.2954 0 8.5909-3.625 8.5909-9 0-5.4091-3.2955-9.0227-8.5909-9.0227-5.3068 0-8.5909 3.6136-8.5909 9.0227 0 5.375 3.2841 9 8.5909 9zm0.0227-3.75c-2.4432 0-3.6932-2.2386-3.6932-5.2841 0-3.0454 1.25-5.2954 3.6932-5.2954 2.3977 0 3.6477 2.25 3.6477 5.2954 0 3.0455-1.25 5.2841-3.6477 5.2841zm26.307-9.0682c-0.4318-3.2159-3.0227-5.2045-7.4318-5.2045-4.4659 0-7.4091 2.0682-7.3977 5.4318-0.0114 2.6136 1.6363 4.3068 5.0454 4.9886l3.0228 0.6023c1.5227 0.3068 2.2159 0.8636 2.2386 1.7386-0.0227 1.0341-1.1477 1.7728-2.8409 1.7728-1.7273 0-2.875-0.7387-3.1705-2.1591l-4.7613 0.25c0.4545 3.3409 3.2954 5.3977 7.9204 5.3977 4.5227 0 7.7614-2.3068 7.7727-5.75-0.0113-2.5227-1.659-4.0341-5.0454-4.7273l-3.1591-0.6363c-1.625-0.3523-2.2273-0.9091-2.2159-1.75-0.0114-1.0455 1.1704-1.7273 2.6704-1.7273 1.6819 0 2.6819 0.9205 2.9205 2.0455l4.4318-0.2728zm12.73-4.9772h-3.2841v-4.1819h-4.8409v4.1819h-2.3863v3.6363h2.3863v9.0568c-0.0227 3.4091 2.3069 5.1023 5.8182 4.9659 1.25-0.0568 2.1364-0.3068 2.625-0.4545l-0.7613-3.6136c-0.2387 0.0568-0.75 0.1591-1.2046 0.1591-0.9659 0-1.6704-0.3637-1.6364-1.7046v-8.4091h3.2841v-3.6363zm8.1932 17.784c2.5796 0 4.25-1.125 5.1023-2.75h0.1364v2.4205h4.5909v-11.773c0-4.1591-3.5569-5.9091-7.3296-5.9091-4.2954 0-7.0113 2-7.6818 5.1818l4.4773 0.3636c0.3295-1.1591 1.3636-2.0113 3.1022-2.0113 1.6705 0 2.5796 0.8182 2.591 2.2841 0.0113 1.1477-1.1932 1.3181-4.2273 1.6136-3.4546 0.3182-6.5568 1.4773-6.5568 5.375 0 3.4545 2.4659 5.2045 5.7954 5.2045zm1.3864-3.3409c-1.4887 0-2.5568-0.6931-2.5568-2.0227 0-1.3636 1.125-2.0341 2.8295-2.2727 1.0568-0.1477 2.7841-0.3977 3.3636-0.7841v1.8523c0 1.8295-1.5113 3.2272-3.6363 3.2272zm17.04-20.261h-4.841v23.273h4.841v-23.273z" fill="#fff"/>
+        <circle cx="102" cy="31" r="5" fill="#FC605C"/>
+      </svg>
       <h1>Gostal</h1>
-
-      <p>Trigger browser and mobile push notifications by a custom HTTPS request
+      <p>triggers browser and mobile push notifications by a custom HTTPS request
         using go microservice.</p>
     </header>
 
     <main class="content">
       <section>
-        <h2 class="subtitle">Client registration</h2>
-        <p>In order to receive a notification on certain device (client) - we
-          need to accept go through small simple steps.</p>
+        <div>
+          <h2 class="subtitle">Client registration</h2>
+          <p>In order to receive a notification on certain device (client) - we
+            need to accept go through small simple steps.</p>
+        </div>
         <button class="registration-button">Register</button>
       </section>
 
@@ -33,18 +38,43 @@
         <h2 class="subtitle">What now?</h2>
         <p>Use the received key to trigger the notifications in registred
           device (client).</p>
-        <textarea class="usage-example">
-          $ curl -XPOST --data "Wait, what?" https://gostal.herokuapp.com/subscriptions/91c19764-69bf-4131-92e2-aea56aea160f
-        </textarea>
+        <textarea class="usage-example">curl -XPOST --data "Wait, what?" https://gostal.herokuapp.com/subscriptions/91c19764-69bf-4131-92e2-aea56aea160f</textarea>
       </section>
     </main>
 
     <footer>Find Gostal on <a href="https://github.com/unused/gostal">GitHub</a>.</footer>
 
     <style>
-      body { background: #10363B; margin: 0; padding: 0; }
-      h1 {  }
-      .content { background: #fff; border-radius: .3125rem; }
+      body { background: #10363B; margin: 0; padding: 0 1rem 1rem 1rem; display: flex; flex-direction: column; align-items: center; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;  }
+      p { font-weight: 300; line-height: 1.2rem; }
+      h2 { font-size: 1.2rem; font-weight: 500; color: #0B282B; }
+      ul { margin: 0; list-style: none; padding: 0; }
+      li { color: #E9ECEC; font-size: 1.2rem; font-weight: 500; margin-bottom: 0.9rem; padding-left: 2.4rem; background-size: 1.2rem; background-repeat: no-repeat; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjggMjcnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTEzLjEuOWExNS4xIDE1LjEgMCAwIDAtMy40LjQgMTMgMTMgMCAxIDAgMTYgOS4zIDEuMiAxLjIgMCAxIDAtMi40LjYgMTAuNiAxMC42IDAgMSAxLTQtNS44IDEuMiAxLjIgMCAxIDAgMS41LTJBMTMgMTMgMCAwIDAgMTMgLjl6bTEzLjYgMWMtLjMgMC0uNiAwLS45LjNMMTIuNCAxNi42IDggMTIuN2ExLjIgMS4yIDAgMSAwLTEuNyAxLjlsNS4zIDQuNmExLjIgMS4yIDAgMCAwIDEuOCAwTDI3LjYgMy45YTEuMiAxLjIgMCAwIDAtMS0yeicgZmlsbD0nI0Q4RDhEOCcvPjwvc3ZnPg==); }
+      li.active { color: #0B282B; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjggMjciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzLjEuOWExNS4xIDE1LjEgMCAwIDAtMy40LjQgMTMgMTMgMCAxIDAgMTYgOS4zIDEuMiAxLjIgMCAxIDAtMi40LjYgMTAuNiAxMC42IDAgMSAxLTQtNS44IDEuMiAxLjIgMCAxIDAgMS41LTJBMTMgMTMgMCAwIDAgMTMgLjl6bTEzLjYgMWMtLjMgMC0uNiAwLS45LjNMMTIuNCAxNi42IDggMTIuN2ExLjIgMS4yIDAgMSAwLTEuNyAxLjlsNS4zIDQuNmExLjIgMS4yIDAgMCAwIDEuOCAwTDI3LjYgMy45YTEuMiAxLjIgMCAwIDAtMS0yeiIgZmlsbD0iIzFDQTg2RCIvPjwvc3ZnPg==); }
+      li:last-of-type { margin-bottom: 0; }
+      button { background-color: #1CA86D; color: #ffffff; font-size: 1rem; font-weight: 300; height: 2.4rem; width: 10rem; margin-left: 1rem; border-radius: .3125rem; letter-spacing: .05rem; border: .125rem solid #1CA86D; outline:0; border: 0; margin-top: 2.7rem; }
+      button:active, button:focus { border: .125rem solid #146241; }
+      textarea { display: block; width: calc(100% - 2.4rem); background: #10363B; border-radius: .3125rem; color: #ffffff; padding: 1rem 1.2rem; font-size: 1rem; font-family: monospace; min-height: 3rem; min-width: calc(100% - 2.4rem); max-width: calc(100% - 2.4rem); }
+      .usage-example:after { content: "$"; position: absolute; left: 0.5rem; top: 0.5rem; display: block; }
+
+      header { max-width: 33.75rem; margin-top: 2rem; }
+      header h1 { font-size: 1rem; display: inline; }
+      header p { display: inline; margin-bottom: 1rem; line-height: 1.4rem; }
+      header svg { width: 6.875rem; display: block; margin-bottom: 0.7rem; }
+
+      main { background: #fff; border-radius: .3125rem; max-width: 33.75rem; box-sizing: border-box; margin-top: 2rem; }
+      header, footer { color: #ffffff; }
+
+      section:first-of-type { display: flex; justify-content: space-between; }
+      section > div { width: 60%; }
+      section { color: #686868; border-bottom: 1px solid #E5E5E5; padding: 2rem; }
+      section:last-of-type { border-bottom: none; }
+      section h2:first-of-type { margin-top: 0; }
+
+      footer { width: 33.75rem; margin-top: 2rem; color: #9DCAD0; }
+      footer a { color: #9DCAD0; }
+      @media screen and (max-width: 29rem) { button { margin-top: 1rem; margin-left: 0; } section:first-of-type { flex-direction: column; } section > div { width: 100%; } li { font-size: 1rem; padding-left: 2rem; } }
+      @media screen and (max-width: 34rem) { footer { width: 100%; } }
     </style>
 
     <script type="application/javascript">
