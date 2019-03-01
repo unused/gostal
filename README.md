@@ -27,8 +27,8 @@ $ curl -XPOST --data "Ahoi" http://<gostal-service>/subscriptions/<key>
 
 ```json
 {
-  privateKey: "...",
-  publicKey: "..."
+  "privateKey": "...",
+  "publicKey": "..."
 }
 ```
 
