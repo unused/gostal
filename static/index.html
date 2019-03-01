@@ -1,3 +1,4 @@
+{{define "index"}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,21 +26,6 @@
         <button class="registration-button">Register</button>
       </section>
 
-      <section>
-        <ul class="steps">
-          <li>Request notification permission</li>
-          <li>Request push subscription</li>
-          <li>Store push subscription</li>
-          <li>Receive key <span>41e952a1-...</span></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="subtitle">What now?</h2>
-        <p>Use the received key to trigger the notifications in registred
-          device (client).</p>
-        <textarea class="usage-example">curl -XPOST --data "Wait, what?" https://gostal.herokuapp.com/subscriptions/91c19764-69bf-4131-92e2-aea56aea160f</textarea>
-      </section>
     </main>
 
     <footer>Find Gostal on <a href="https://github.com/unused/gostal">GitHub</a>.</footer>
@@ -50,9 +36,11 @@
       h2 { font-size: 1.2rem; font-weight: 500; color: #0B282B; }
       ul { margin: 0; list-style: none; padding: 0; }
       li { color: #E9ECEC; font-size: 1.2rem; font-weight: 500; margin-bottom: 0.9rem; padding-left: 2.4rem; background-size: 1.2rem; background-repeat: no-repeat; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjggMjcnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTEzLjEuOWExNS4xIDE1LjEgMCAwIDAtMy40LjQgMTMgMTMgMCAxIDAgMTYgOS4zIDEuMiAxLjIgMCAxIDAtMi40LjYgMTAuNiAxMC42IDAgMSAxLTQtNS44IDEuMiAxLjIgMCAxIDAgMS41LTJBMTMgMTMgMCAwIDAgMTMgLjl6bTEzLjYgMWMtLjMgMC0uNiAwLS45LjNMMTIuNCAxNi42IDggMTIuN2ExLjIgMS4yIDAgMSAwLTEuNyAxLjlsNS4zIDQuNmExLjIgMS4yIDAgMCAwIDEuOCAwTDI3LjYgMy45YTEuMiAxLjIgMCAwIDAtMS0yeicgZmlsbD0nI0Q4RDhEOCcvPjwvc3ZnPg==); }
-      li.active { color: #0B282B; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjggMjciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzLjEuOWExNS4xIDE1LjEgMCAwIDAtMy40LjQgMTMgMTMgMCAxIDAgMTYgOS4zIDEuMiAxLjIgMCAxIDAtMi40LjYgMTAuNiAxMC42IDAgMSAxLTQtNS44IDEuMiAxLjIgMCAxIDAgMS41LTJBMTMgMTMgMCAwIDAgMTMgLjl6bTEzLjYgMWMtLjMgMC0uNiAwLS45LjNMMTIuNCAxNi42IDggMTIuN2ExLjIgMS4yIDAgMSAwLTEuNyAxLjlsNS4zIDQuNmExLjIgMS4yIDAgMCAwIDEuOCAwTDI3LjYgMy45YTEuMiAxLjIgMCAwIDAtMS0yeiIgZmlsbD0iIzFDQTg2RCIvPjwvc3ZnPg==); }
+      li.active { color: #0B282B; transition: color 257ms linear; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjggMjciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzLjEuOWExNS4xIDE1LjEgMCAwIDAtMy40LjQgMTMgMTMgMCAxIDAgMTYgOS4zIDEuMiAxLjIgMCAxIDAtMi40LjYgMTAuNiAxMC42IDAgMSAxLTQtNS44IDEuMiAxLjIgMCAxIDAgMS41LTJBMTMgMTMgMCAwIDAgMTMgLjl6bTEzLjYgMWMtLjMgMC0uNiAwLS45LjNMMTIuNCAxNi42IDggMTIuN2ExLjIgMS4yIDAgMSAwLTEuNyAxLjlsNS4zIDQuNmExLjIgMS4yIDAgMCAwIDEuOCAwTDI3LjYgMy45YTEuMiAxLjIgMCAwIDAtMS0yeiIgZmlsbD0iIzFDQTg2RCIvPjwvc3ZnPg==); }
       li:last-of-type { margin-bottom: 0; }
-      button { background-color: #1CA86D; color: #ffffff; font-size: 1rem; font-weight: 300; height: 2.4rem; width: 10rem; margin-left: 1rem; border-radius: .3125rem; letter-spacing: .05rem; border: .125rem solid #1CA86D; outline:0; border: 0; margin-top: 2.7rem; }
+      li span { border-radius: .3125rem; background: #EEE; color: #0B282B; padding: .125rem .5rem .25rem .75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 13rem; display: inline-block; margin: 0 0 0 2rem; font-size: 1rem; position: absolute; transform: translate(0, -.25rem); }
+      li span:before { display: inline-block; height: 1.25rem; width: 1.25rem; content: ' '; transform: translate(0, .1875rem); background-repeat: no-repeat; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuOTIwNyA2LjczODcyVjUuMTU2NjlDMTEuOTM1NiA0LjQ4NTA3IDExLjgxOTMgMy44MTcxOCAxMS41Nzg3IDMuMTkyMjRDMTEuMzM4MSAyLjU2NzMgMTAuOTc4IDEuOTk3OTIgMTAuNTE5NiAxLjUxNzUzQzEwLjA2MTIgMS4wMzcxNSA5LjUxMzczIDAuNjU1NDQzIDguOTA5MzIgMC4zOTQ4NDNDOC4zMDQ5MSAwLjEzNDI0MiA3LjY1NTc2IDAgNyAwQzYuMzQ0MjQgMCA1LjY5NTA5IDAuMTM0MjQyIDUuMDkwNjggMC4zOTQ4NDNDNC40ODYyOCAwLjY1NTQ0MyAzLjkzODc5IDEuMDM3MTUgMy40ODAzOSAxLjUxNzUzQzMuMDIxOTkgMS45OTc5MiAyLjY2MTkyIDIuNTY3MyAyLjQyMTMyIDMuMTkyMjRDMi4xODA3MiAzLjgxNzE4IDIuMDY0NDUgNC40ODUwNyAyLjA3OTMzIDUuMTU2NjlWNi43NDkxMUMxLjQ2NjMgNi45OTg2MyAwLjk0MDQzIDcuNDMwODIgMC41Njk3MzggNy45ODk4QzAuMTk5MDQ2IDguNTQ4NzggMC4wMDA1NzgwODggOS4yMDg4MyAwIDkuODg0NjFWMTQuNjIyOUMwIDE1LjUxODYgMC4zNDczMDkgMTYuMzc3NSAwLjk2NTUyNCAxNy4wMTA5QzEuNTgzNzQgMTcuNjQ0MiAyLjQyMjIyIDE4IDMuMjk2NSAxOEgxMC43MDM1QzExLjU3NzggMTggMTIuNDE2MyAxNy42NDQyIDEzLjAzNDUgMTcuMDEwOUMxMy42NTI3IDE2LjM3NzUgMTQgMTUuNTE4NiAxNCAxNC42MjI5VjkuODc0MjFDMTMuOTk5NCA5LjE5ODQ0IDEzLjgwMSA4LjUzODM5IDEzLjQzMDMgNy45Nzk0MUMxMy4wNTk2IDcuNDIwNDMgMTIuNTMzNyA2Ljk4ODI0IDExLjkyMDcgNi43Mzg3MlpNNi45OTg3MyAxLjY2NTNDNy40NDU4NCAxLjY2NTY0IDcuODg4NDkgMS43NTYyNCA4LjMwMTQgMS45MzE5MUM4LjcxNDMxIDIuMTA3NTkgOS4wODkzOCAyLjM2NDkgOS40MDUxOCAyLjY4OTE0QzkuNzIwOTcgMy4wMTMzOCA5Ljk3MTMgMy4zOTgxOSAxMC4xNDE5IDMuODIxNThDMTAuMzEyNCA0LjI0NDk4IDEwLjM5OTkgNC42OTg2NiAxMC4zOTkyIDUuMTU2NjlWNi41MDc1MkgzLjU5ODI2VjUuMTU2NjlDMy41OTc1OSA0LjY5ODY2IDMuNjg1MDQgNC4yNDQ5OCAzLjg1NTYgMy44MjE1OEM0LjAyNjE2IDMuMzk4MTkgNC4yNzY0OSAzLjAxMzM4IDQuNTkyMjkgMi42ODkxNEM0LjkwODA4IDIuMzY0OSA1LjI4MzE1IDIuMTA3NTkgNS42OTYwNiAxLjkzMTkxQzYuMTA4OTcgMS43NTYyNCA2LjU1MTYzIDEuNjY1NjQgNi45OTg3MyAxLjY2NTNaTTEyLjQ3ODUgMTQuNjIyOUMxMi40Nzg1IDE1LjEwNTIgMTIuMjkxNSAxNS41Njc3IDExLjk1ODYgMTUuOTA4N0MxMS42MjU4IDE2LjI0OTggMTEuMTc0MyAxNi40NDEzIDEwLjcwMzUgMTYuNDQxM0gzLjI5Mzk3QzIuODIzMiAxNi40NDEzIDIuMzcxNzEgMTYuMjQ5OCAyLjAzODgzIDE1LjkwODdDMS43MDU5NCAxNS41Njc3IDEuNTE4OTMgMTUuMTA1MiAxLjUxODkzIDE0LjYyMjlWOS44NzQyMUMxLjUxODkzIDkuMzkxOTQgMS43MDU5NCA4LjkyOTQxIDIuMDM4ODMgOC41ODgzOUMyLjM3MTcxIDguMjQ3MzcgMi44MjMyIDguMDU1NzggMy4yOTM5NyA4LjA1NTc4SDEwLjcwMzVDMTEuMTc0MyA4LjA1NTc4IDExLjYyNTggOC4yNDczNyAxMS45NTg2IDguNTg4MzlDMTIuMjkxNSA4LjkyOTQxIDEyLjQ3ODUgOS4zOTE5NCAxMi40Nzg1IDkuODc0MjFWMTQuNjIyOVoiIGZpbGw9IiM3RDhCOEQiLz48L3N2Zz4=); }
+      button { background-color: #1CA86D; color: #FFF; font-size: 1rem; font-weight: 300; height: 2.4rem; width: 10rem; margin-left: 1rem; border-radius: .3125rem; letter-spacing: .05rem; border: .125rem solid #1CA86D; outline:0; border: 0; margin-top: 2.7rem; }
       button:active, button:focus { border: .125rem solid #146241; }
       textarea { display: block; width: calc(100% - 2.4rem); background: #10363B; border-radius: .3125rem; color: #ffffff; padding: 1rem 1.2rem; font-size: 1rem; font-family: monospace; min-height: 3rem; min-width: calc(100% - 2.4rem); max-width: calc(100% - 2.4rem); }
       .usage-example:after { content: "$"; position: absolute; left: 0.5rem; top: 0.5rem; display: block; }
@@ -62,8 +50,8 @@
       header p { display: inline; margin-bottom: 1rem; line-height: 1.4rem; }
       header svg { width: 6.875rem; display: block; margin-bottom: 0.7rem; }
 
-      main { background: #fff; border-radius: .3125rem; max-width: 33.75rem; box-sizing: border-box; margin-top: 2rem; }
-      header, footer { color: #ffffff; }
+      main { background: #FFF; border-radius: .3125rem; max-width: 33.75rem; box-sizing: border-box; margin-top: 2rem; }
+      header, footer { color: #FFF; }
 
       section:first-of-type { display: flex; justify-content: space-between; }
       section > div { width: 60%; }
@@ -82,8 +70,8 @@
 
       {{template "js"}}
 
-      document.querySelector('.register-button')
-        .addEventListener("click", register);
+      document.querySelector('button').addEventListener("click", register);
     </script>
   </body>
 </html>
+{{end}}
