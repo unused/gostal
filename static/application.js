@@ -102,6 +102,10 @@ function register() {
     return;
   }
 
+  let button = document.querySelector('button');
+  button.removeEventListener('click', register);
+  button.disabled = true;
+
   navigator.serviceWorker.register('sw.js')
     .then(function() {
       completeStep();
